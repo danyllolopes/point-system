@@ -6,11 +6,6 @@
         <h1>Olá, {{ name }}!</h1>
       </div>
     </header>
-    <section class='info-time'>
-      <h2>{{ currentDate }}</h2>
-      <h2>{{ hour }}</h2>
-      <h2>{{ time }}</h2>
-    </section>
     <List />
   </div>
 </template>
@@ -23,36 +18,8 @@ export default {
   components: {
     List
   },
-  data: () => ({    
-    date: new Date(),
-    hour: '00:00:00',
-    time: 'Tempo 07:15:47'
-  }),
+  data: () => ({}),
   props: ['name'],
-  computed: {
-    currentDate() {
-      const formatDate = this.date.toLocaleDateString('pt-BR', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-      });
-      return formatDate;
-    },
-  },
-  methods: {
-    currentTime() {
-      setInterval(() => {
-        let date = new Date();
-        let hours = date.getHours();
-        let minutes = date.getMinutes();
-        let seconds = date.getSeconds();
-        this.hour = `${hours}:${minutes}:${seconds}`;
-      })
-    }
-  },
-  mounted(){
-    this.currentTime();
-  }
 };
 </script>
 
@@ -80,19 +47,4 @@ export default {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 }
-.info-time {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding-bottom: 30px;
-}
-.info-time h2 { 
-  color: #fff;
-  font-size: 1.562rem;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-}
-.info-time h2:nth-last-child(1){
-  color: #FCCD2A;
-} 
 </style>
