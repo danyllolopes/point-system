@@ -6,10 +6,10 @@
       <h2>Tempo {{ time }}</h2>
     </div>
     <div class="list-button">
-      <button  @click.prevent="submitStart">Cheguei</button>
-      <button  @click.prevent="udpateTimesheet">Fui Almoçar</button>
-      <button  @click.prevent="udpateTimesheet">Voltei</button>
-      <button  @click.prevent="udpateTimesheet">Fui</button>
+      <button :disabled="disable.start"  @click.prevent="submitStart">Cheguei</button>
+      <button :disabled="disable.startLunch" @click.prevent="udpateTimesheet">Fui Almoçar</button>
+      <button :disabled="disable.endLunch"   @click.prevent="udpateTimesheet">Voltei</button>
+      <button :disabled="disable.end" @click.prevent="udpateTimesheet">Fui</button>
     </div>
 
     <template>
