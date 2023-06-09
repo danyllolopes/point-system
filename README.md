@@ -1,24 +1,5 @@
-# point-system
+<h1>Sistema de Ponto</h1>
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<p>Baixar o projeto e abrir ele no Visual Studio Code</p>
+<p>Logo apos abrir o projeto, navegue pelo terminal ate a pasta point-system\point-system</p>
+<p>De o comando npm install e logo em seguida npm run serve para rodar o projeto</p>
